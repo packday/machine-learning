@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.cross_validation import ShuffleSplit
-from sklearn.metrics import r2_score
+from sklearn.metrics import make_scorer
 
 
 #Load data
@@ -17,4 +17,4 @@ print "Mean ", np.mean(prices)
 print "Median ", np.median(prices)
 print "Standard Deviation ", np.std(prices)
 
-print r2_score()
+make_scorer()
