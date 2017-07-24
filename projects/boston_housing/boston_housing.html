@@ -13245,7 +13245,7 @@ YII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: All of the graphs with the exception of first, which has a max_depth = 1, improves the training score as more data points are made available. In any case more training data proves the model's chances of correctly classifying new data points. Therefore with more data both training and testing score should improve and converge.</strong></p>
+<p><strong>Answer: All of the graphs with the exception of the second, which has a max_depth = 3, improves the training score as more data points are made available; this learning curve, has relatively high training &amp; testing scores. The first graph with a max_depth = 1 is indicative of high bias (underfitting) because both the training &amp; testing scores are converging but remain low. The graph with a max_depth = 10 shows high variance, therefore overfits the data. The training score is high, while the testing score is low.</strong></p>
 
 </div>
 </div>
@@ -13772,7 +13772,7 @@ kYihpCciIhHj/wHK+cHJom++DAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: Grid Search is a brute-force search through the feature space to optimize the features that have the greatest impact on the objective function.</strong></p>
+<p><strong>Answer: Grid Search or hyper-parameter tuning is a brute-force search to identify the number of parameters that have the greatest impact on the objective function. The idea is to find a model (degree) that best fits the data, this is acheived by running the training &amp; validation sets and calculation the r2 score. The degree with the best score does a better job of generalizing new data.</strong></p>
 
 </div>
 </div>
@@ -13793,7 +13793,7 @@ kYihpCciIhHj/wHK+cHJom++DAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: K-fold cross-validatiaon is used to verify the performance of a particular model. The dataset is broken up into k {training, test} pairs according a set distribution. Each pair is used to train &amp; test the model, and performance of each run is recorded and averaged together. This performance measure is a indicator on how well the model generalizes on new data. When used in conjunction with Grid Search, it becomes a great tool for avoiding overfitting with sensitive or complex models.</strong></p>
+<p><strong>Answer: K-fold cross-validatiaon is used to verify the performance of a particular model. The dataset is broken up is randomly partitioned into k equal sized subsamples. Of the k subsamples, a single subsample is retained as the validation data for testing the model, and the remaining k − 1 subsamples are used as training data. The performance of each run is recorded and averaged together. This performance measure is a indicator on how well the model generalizes on new data. When used in conjunction with Grid Search, it becomes a great tool for avoiding overfitting with sensitive or complex models. The danger of using Grid Search without cross-validation, is that the models that are being trained could inadvertingly get overfitted and the r2 scores would not be accurate.</strong></p>
 
 </div>
 </div>
@@ -14018,7 +14018,7 @@ Predicted selling price for Client 3&#39;s home: $922,740.00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: All of Client 1's feature values are in between the Clients 2 &amp; 3 feature values, so it does make sense that the predicted selling price is closer to the mean. It also seems that Clients 2 &amp; 3 likewise aligned</strong></p>
+<p><strong>Answer: All of Client 1's feature values are in between the Clients 2 &amp; 3 feature values, so it does make sense that the predicted selling price is closer to the mean. Client 2 has a higher poverty level and higher Student-teacher ratio, which are undesirable traits for home buyers, therefore it makes sense that home value will be less. Conversely, Client 3 has the lowest poverty level &amp; student-teacher ratio, which are desirable traits, therefore the home value would be more. The number of rooms are also a crucial feature, so Clients 1, 2, 3 having 4, 5, and 8 rooms respectively helps justify the price of the houses as well.</strong></p>
 
 </div>
 </div>
